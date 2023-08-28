@@ -8,8 +8,8 @@ namespace SRP
         public string Title { get ; }
         public string Author { get ; }
         public string Code { get ;  }
-        public string LibrarySector { get ; set; }
-        public string LibraryShelve { get ; set; }
+        //public string LibrarySector { get ; set; } //no es facilmente reutilizable
+        //public string LibraryShelve { get ; set; } //el libro tiene responsabilidades adicionales que no le corresponden.
 
         public Book(String title, String author, String code)
         {
@@ -18,11 +18,11 @@ namespace SRP
             this.Code = code;
         }
 
-        public void ShelveBook(String sector, String shelve)
-        {
-            this.LibrarySector = sector;
-            this.LibraryShelve = shelve;
-        }
+        //public void ShelveBook(String sector, String shelve)
+        //{
+            //this.LibrarySector = sector;
+            //this.LibraryShelve = shelve;
+        //}
 
     }
 }
