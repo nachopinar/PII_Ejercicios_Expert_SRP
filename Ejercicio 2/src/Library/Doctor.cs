@@ -9,38 +9,22 @@ namespace Library
         private string DoctorName;
         private string Specialty;
 
-
-
-
+//CONSTRUCTOR
         public Doctor(string nombre, string especialidad) 
         {
-            if (string.IsNullOrEmpty(nombre))
+            bool isValid = false;
+            if ((!(string.IsNullOrEmpty(nombre))) && (!(string.IsNullOrEmpty(especialidad))))
+            {
+                isValid = true;
+            }
+            if (isValid == true) 
             {
                 this.DoctorName = (nombre);
+                this.Specialty = especialidad;
             }
-            if (string.IsNullOrEmpty(especialidad))
-            {
-                this.Specialty = (especialidad);
-            }
-         }
-
-        public string GetDocName()
-        {
-            return this.DoctorName;
-        }
-
-        public void SetDocName()
-        {
         }
     }
-
-
 }
 
-
-
-
-
-
-
+//podria hacer algun isValid aparte y no dentro del constructor;
 
